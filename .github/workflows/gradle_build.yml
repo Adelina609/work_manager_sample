@@ -39,7 +39,7 @@ jobs:
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
       - name: Build and analyze
-        run: ./gradlew build jacocoTestReport sonarqube --info
+        run: ./gradlew build sonarqube --info
         env:
           # Needed to get some information about the pull request, if any
           GITHUB_TOKEN: ${{ secrets.SONAR_GITHUB_TOKEN }}
